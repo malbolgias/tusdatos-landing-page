@@ -5,36 +5,36 @@ const Features = () => {
   const features = [
     {
       icon: CheckCircle,
-      title: "Legal-First Approach",
-      description: "Building a culture of compliance with comprehensive regulatory framework support."
+      title: "Legal-First Compliance Approach",
+      description: "Building comprehensive compliance culture with robust regulatory framework support for LAFT, KYC, AML, and international data protection standards."
     },
     {
       icon: Clock,
-      title: "Technological Agility",
-      description: "Continuous innovation and rapid deployment of cutting-edge validation solutions."
+      title: "Advanced Technological Agility",
+      description: "Continuous innovation in data validation technology with rapid deployment of cutting-edge background verification and compliance validation solutions."
     },
     {
       icon: Globe,
-      title: "Global Coverage",
-      description: "Operating in Colombia and Ecuador with access to international validation databases."
+      title: "Extensive Global Data Coverage",
+      description: "Operating across Colombia and Ecuador with comprehensive access to international validation databases, sanctions lists, and compliance registries worldwide."
     },
     {
       icon: Award,
-      title: "Industry Recognition",
-      description: "Forbes Top 100 Startups and LatamDigital Awards winner for excellence in innovation."
+      title: "Industry-Leading Recognition",
+      description: "Forbes Top 100 Startups and LatamDigital Awards winner, recognized for excellence in data validation innovation and compliance technology solutions."
     }
   ];
 
   const useCases = [
-    "Pre-employment screening",
-    "International certifications (BASC, OEA)",
-    "Third-party validation for suppliers",
-    "User onboarding for apps and platforms",
-    "Driver and field staff validation",
-    "Strategic alliance partnerships",
-    "Regulated industry compliance",
-    "Mass hiring process security",
-    "Financial services validation"
+    "Pre-employment background screening and validation",
+    "International compliance certifications (BASC, OEA)",
+    "Third-party supplier due diligence validation",
+    "User onboarding KYC for digital platforms and apps",
+    "Driver and field staff background verification",
+    "Strategic business alliance partnership validation",
+    "Regulated industry compliance and risk management",
+    "Mass hiring process security and background checks",
+    "Financial services KYC, AML, and compliance validation"
   ];
 
   return (
@@ -44,11 +44,11 @@ const Features = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Key Differentiators
+                Key Data Validation Differentiators
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Tusdatos stands out in the market through warm, responsive customer service, 
-                legal-first compliance approach, and continuous technological innovation.
+                Tusdatos leads the Latin American data validation market through exceptional customer service, 
+                comprehensive legal-first compliance approach, continuous technological innovation, and advanced background verification capabilities.
               </p>
             </div>
             
@@ -68,7 +68,7 @@ const Features = () => {
           </div>
           
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Real-World Use Cases</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Real-World Data Validation Use Cases</h3>
             <div className="grid gap-3">
               {useCases.map((useCase, index) => (
                 <div key={index} className="flex items-center space-x-3">

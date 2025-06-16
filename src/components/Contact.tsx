@@ -5,28 +5,28 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const Contact = () => {
   const contacts = [
     {
-      title: "Administrative",
+      title: "Administrative & Billing",
       email: "cartera@tusdatos.co",
       phone: "+57 305 408 2874",
       icon: Mail,
       color: "text-blue-600"
     },
     {
-      title: "Support",
+      title: "Technical Support & Validation",
       email: "soporte@tusdatos.co", 
       phone: "+57 318 865 1031",
       icon: Phone,
       color: "text-green-600"
     },
     {
-      title: "Sales",
+      title: "Sales & Compliance Consulting",
       email: "comercial@tusdatos.co",
       phone: "+57 305 436 2276", 
       icon: Phone,
       color: "text-purple-600"
     },
     {
-      title: "Data Rights",
+      title: "Data Rights & Privacy Compliance",
       email: "habeas_data@tusdatos.co",
       phone: "",
       icon: Mail,
@@ -39,11 +39,11 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Contact Information
+            Contact Our Data Validation Experts
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with our team for support, sales inquiries, or administrative matters.
-            We're here to help you with all your validation and compliance needs.
+            Connect with our specialized team for comprehensive support on data validation, background verification, compliance consulting, 
+            and technical assistance. Expert guidance for all your KYC, AML, LAFT, and due diligence requirements.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ const Contact = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        WhatsApp
+                        WhatsApp Support
                       </a>
                     </div>
                   )}
@@ -95,15 +95,15 @@ const Contact = () => {
             <CardHeader>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-6 h-6 text-blue-600" />
-                <CardTitle className="text-xl font-semibold text-gray-900">Location</CardTitle>
+                <CardTitle className="text-xl font-semibold text-gray-900">Data Validation Center Location</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <p className="text-gray-700">
-                Based in Bogotá, Colombia
+                Headquartered in Bogotá, Colombia
               </p>
               <p className="text-gray-600 mt-2">
-                Serving Colombia and Ecuador with global validation coverage
+                Serving Colombia and Ecuador with comprehensive global data validation coverage and compliance services
               </p>
             </CardContent>
           </Card>
@@ -112,7 +112,7 @@ const Contact = () => {
             <CardHeader>
               <div className="flex items-center space-x-3">
                 <Clock className="w-6 h-6 text-green-600" />
-                <CardTitle className="text-xl font-semibold text-gray-900">Business Hours</CardTitle>
+                <CardTitle className="text-xl font-semibold text-gray-900">Support & Consultation Hours</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
@@ -123,7 +123,7 @@ const Contact = () => {
                 8:00 AM - 6:00 PM (COT)
               </p>
               <p className="text-gray-500 text-sm mt-2">
-                Colombian Time Zone
+                Colombian Time Zone - Full Data Validation Support
               </p>
             </CardContent>
           </Card>

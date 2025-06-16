@@ -6,44 +6,44 @@ const Services = () => {
   const services = [
     {
       icon: Search,
-      title: "Background Validation",
-      description: "Quick and secure background checks for individuals, companies, and vehicles to reduce hiring risks.",
+      title: "Advanced Background Validation",
+      description: "Comprehensive background verification checks for individuals, companies, and vehicles. Real-time data validation to minimize hiring risks and enhance due diligence processes.",
       color: "text-blue-500"
     },
     {
       icon: Shield,
-      title: "Restrictive List Checks",
-      description: "Access to OFAC, UN, EU sanctions, PEPs, and national databases for compliance requirements.",
+      title: "Global Compliance & Restrictive Lists",
+      description: "Complete access to OFAC, UN, EU sanctions, PEPs databases, and national compliance registries. Essential for KYC, AML, and anti-money laundering requirements.",
       color: "text-green-500"
     },
     {
       icon: Users,
-      title: "Deceased Person Validation",
-      description: "Verify deceased individuals in official registries to maintain accurate records and reduce fraud.",
+      title: "Deceased Person Data Validation",
+      description: "Verify deceased individuals through official registry validation to maintain accurate records, prevent fraud, and ensure compliance with data protection regulations.",
       color: "text-purple-500"
     },
     {
       icon: Building,
-      title: "LAFT & PTEE Implementation",
-      description: "Consulting services for companies subject to Colombian and international regulations.",
+      title: "LAFT & PTEE Compliance Implementation",
+      description: "Expert consulting services for companies requiring Colombian and international regulatory compliance. Full LAFT system implementation and ongoing compliance support.",
       color: "text-orange-500"
     },
     {
       icon: FileText,
-      title: "Tusdatos Empresas Platform",
-      description: "Business intelligence platform with public data on Colombian companies and financial insights.",
+      title: "Tusdatos Business Intelligence Platform",
+      description: "Comprehensive business intelligence platform providing validated public data on Colombian companies, financial risk assessment, and corporate due diligence insights.",
       color: "text-indigo-500"
     },
     {
       icon: Eye,
-      title: "Due Diligence",
-      description: "Complete evaluation service for counterparties based on public and private data analysis.",
+      title: "Complete Due Diligence Services",
+      description: "Thorough counterparty evaluation services combining public and private data analysis for comprehensive risk assessment and compliance validation.",
       color: "text-teal-500"
     },
     {
       icon: AlertTriangle,
-      title: "Enhanced Due Diligence",
-      description: "Deeper risk analysis for high-risk clients, PEPs, and cross-border transactions.",
+      title: "Enhanced Due Diligence & Risk Analysis",
+      description: "Advanced risk analysis for high-risk clients, PEPs validation, cross-border transaction monitoring, and enhanced compliance due diligence for complex cases.",
       color: "text-red-500"
     }
   ];
@@ -53,11 +53,11 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Service Offerings
+            Comprehensive Data Validation & Compliance Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Automated data retrieval from over 300 national and international sources 
-            to deliver a wide range of validation and compliance services.
+            Automated data validation and verification services powered by 300+ national and international sources. 
+            Complete background checks, compliance verification, due diligence, and risk management solutions for businesses across Latin America.
           </p>
         </div>
         
