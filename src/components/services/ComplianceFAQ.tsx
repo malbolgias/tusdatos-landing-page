@@ -12,7 +12,7 @@ const ComplianceFAQ = () => {
     },
     {
       question: "How does your KYC validation process work?",
-      answer: "Our KYC (Know Your Customer) process includes identity verification, document validation, background checks, and risk assessment. We validate information against multiple databases including government records, sanctions lists, and PEPs databases to ensure comprehensive customer due diligence."
+      answer: "Our KYC (Know Your Customer) process includes identity verification, document validation, background checks, and risk assessment. We validate information against multiple databases including government records, sanctions lists, and PEP databases to ensure comprehensive customer due diligence."
     },
     {
       question: "What sanctions lists do you screen against?",
@@ -20,11 +20,11 @@ const ComplianceFAQ = () => {
     },
     {
       question: "Can you help with PTEE compliance implementation?",
-      answer: "Yes, we provide complete PTEE (Personas Expuestas Políticamente del Exterior) compliance consulting and implementation services. This includes policy development, system implementation, ongoing monitoring, and staff training to ensure full regulatory compliance."
+      answer: "Yes, we provide complete PTEE (Plan de transparencia y ética empresarial) compliance consulting and implementation services. This includes policy development, system implementation, ongoing monitoring, and staff training to ensure full regulatory compliance."
     },
     {
       question: "How often is your compliance database updated?",
-      answer: "Our compliance database is updated in real-time with new information from sanctions lists, PEPs databases, and regulatory sources. We also provide daily, weekly, and monthly batch updates depending on your compliance requirements and risk tolerance."
+      answer: "Our compliance database is updated in real-time with new information from sanctions lists, PEP databases, and regulatory sources. We also provide daily, weekly, and monthly batch updates depending on your compliance requirements and risk tolerance."
     },
     {
       question: "Do you provide audit trail and reporting capabilities?",

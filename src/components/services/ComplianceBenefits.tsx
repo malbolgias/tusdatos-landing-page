@@ -12,7 +12,7 @@ const ComplianceBenefits = () => {
     {
       icon: TrendingUp,
       title: "Risk Reduction & Management",
-      description: "Significantly reduce financial crime risks through comprehensive sanctions screening, PEPs validation, and enhanced due diligence processes across all customer interactions.",
+      description: "Significantly reduce financial crime risks through comprehensive sanctions screening, PEP validation, and enhanced due diligence processes across all customer interactions.",
       metrics: "85% risk reduction average"
     },
     {
@@ -36,7 +36,7 @@ const ComplianceBenefits = () => {
     {
       icon: Database,
       title: "Comprehensive Data Coverage",
-      description: "Access to 300+ global data sources including sanctions lists, PEPs databases, government records, and regulatory information for complete compliance validation coverage.",
+      description: "Access to 300+ global data sources including sanctions lists, PEP databases, government records, and regulatory information for complete compliance validation coverage.",
       metrics: "300+ data sources"
     }
   ];

@@ -28,7 +28,7 @@ const ComplianceOverview = () => {
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 Tusdatos provides comprehensive compliance solutions including SARLAFT implementation, KYC validation, 
                 AML screening, PTEE compliance, and due diligence services. Our platform accesses global sanctions lists, 
-                PEPs databases, and regulatory compliance sources to ensure full adherence to Colombian and international regulations.
+                PEP databases, and regulatory compliance sources to ensure full adherence to Colombian and international regulations.
               </p>
 
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -66,7 +66,7 @@ const ComplianceOverview = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Database className="w-5 h-5 text-blue-500" />
-                  <span className="text-gray-700">Global sanctions lists and PEPs validation screening</span>
+                  <span className="text-gray-700">Global sanctions lists and PEP validation screening</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Search className="w-5 h-5 text-purple-500" />

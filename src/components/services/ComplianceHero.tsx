@@ -23,7 +23,7 @@ const ComplianceHero = () => {
               
               <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
                 Ensure full regulatory compliance with our comprehensive SARLAFT, KYC, AML, and PTEE validation services. 
-                Access global sanctions lists, PEPs databases, and compliance verification across 300+ sources.
+                Access global sanctions lists, PEP databases, and compliance verification across 300+ sources.
               </p>
             </div>
             
@@ -65,7 +65,7 @@ const ComplianceHero = () => {
                     <Database className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Sanctions & PEPs Screening</h3>
+                    <h3 className="font-semibold">Sanctions & PEP Screening</h3>
                     <p className="text-gray-400 text-sm">Global restrictive lists validation</p>
                   </div>
                 </div>

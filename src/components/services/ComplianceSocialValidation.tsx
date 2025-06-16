@@ -14,7 +14,7 @@ const ComplianceSocialValidation = () => {
       position: "Risk Officer, Financial Institution"
     },
     {
-      quote: "Comprehensive compliance validation services covering all our regulatory needs. Excellent PEPs screening and AML monitoring capabilities.",
+      quote: "Comprehensive compliance validation services covering all our regulatory needs. Excellent PEP screening and AML monitoring capabilities.",
       author: "Diego Ramirez",
       position: "Compliance Manager, Insurance Group"
     }
@@ -33,8 +33,8 @@ const ComplianceSocialValidation = () => {
     },
     {
       icon: Users,
-      title: "PEPs Validation",
-      description: "Politically Exposed Persons screening"
+      title: "PEP Validation",
+      description: "Publicly Exposed Person screening"
     },
     {
       icon: Award,

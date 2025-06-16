@@ -12,8 +12,8 @@ const ComplianceFeatures = () => {
     {
       icon: Database,
       title: "Global Sanctions Screening",
-      description: "Access to OFAC, UN, EU, and other international sanctions lists with comprehensive PEPs database validation.",
-      benefits: ["300+ global sanctions lists", "PEPs database access", "Real-time list updates"]
+      description: "Access to OFAC, UN, EU, and other international sanctions lists with comprehensive PEP database validation.",
+      benefits: ["300+ global sanctions lists", "PEP database access", "Real-time list updates"]
     },
     {
       icon: Search,
@@ -24,7 +24,7 @@ const ComplianceFeatures = () => {
     {
       icon: Eye,
       title: "PTEE Compliance Support",
-      description: "Complete PTEE (Persons Exposed to International Politics) compliance consulting and implementation.",
+      description: "Complete PTEE (Plan de transparencia y ética empresarial) compliance consulting and implementation.",
       benefits: ["PTEE identification", "Compliance consulting", "Policy implementation"]
     },
     {
