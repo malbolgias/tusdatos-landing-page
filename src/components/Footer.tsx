@@ -36,21 +36,21 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/background-validation" className="hover:text-white transition-colors">
                   Background Validation
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  Compliance Checks
+                <Link to="/services/compliance" className="hover:text-white transition-colors">
+                  Compliance Services
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  Due Diligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-white transition-colors">
+                <Link to="/services/compliance" className="hover:text-white transition-colors">
                   LAFT Implementation
                 </Link>
               </li>

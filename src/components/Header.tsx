@@ -1,8 +1,16 @@
 
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, Menu, X } from 'lucide-react';
+import { Shield, Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,13 +18,19 @@ const Header = () => {
 
   const navigation = [
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' },
   ];
 
+  const serviceLinks = [
+    { name: 'All Services', href: '/services' },
+    { name: 'Background Validation', href: '/services/background-validation' },
+    { name: 'Compliance Services', href: '/services/compliance' },
+  ];
+
   const isActive = (href: string) => location.pathname === href;
+  const isServicesActive = () => location.pathname.startsWith('/services');
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
@@ -28,7 +42,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -42,6 +56,39 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
+            
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={`font-medium transition-colors duration-200 ${
+                    isServicesActive()
+                      ? 'text-blue-600'
+                      : 'text-gray-700 hover:text-blue-600'
+                  }`}>
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid gap-3 p-4 w-[400px]">
+                      {serviceLinks.map((service) => (
+                        <NavigationMenuLink key={service.name} asChild>
+                          <Link
+                            to={service.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{service.name}</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {service.name === 'All Services' && 'Overview of all our validation and compliance services'}
+                              {service.name === 'Background Validation' && 'Comprehensive background checks and identity verification'}
+                              {service.name === 'Compliance Services' && 'LAFT, KYC, AML and regulatory compliance solutions'}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -84,6 +131,21 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              <div className="px-3 py-2">
+                <div className="font-medium text-gray-900 mb-2">Services</div>
+                {serviceLinks.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    className="block px-3 py-1 text-sm text-gray-600 hover:text-blue-600"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+              
               <div className="px-3 py-2 space-y-2">
                 <Button variant="outline" className="w-full">
                   Log In
