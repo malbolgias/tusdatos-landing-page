@@ -9,8 +9,8 @@ export const runContrastTests = () => {
   // Return summary for potential UI display
   return {
     totalTests: results.length,
-    passed: results.filter(r => r.passesAA).length,
-    failed: results.filter(r => !r.passesAA).length,
+    passed: results.filter(r => r.normalPassesAA && r.hoverPassesAA).length,
+    failed: results.filter(r => !r.normalPassesAA || !r.hoverPassesAA).length,
     results
   };
 };
