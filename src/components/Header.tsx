@@ -1,6 +1,7 @@
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, Menu, X, ChevronDown } from 'lucide-react';
+import { Shield, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -40,53 +41,63 @@ const Header = () => {
   const isUseCasesActive = () => location.pathname.startsWith('/use-cases');
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-100 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <Shield className="w-8 h-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">Tusdatos</span>
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+              <Shield className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Tusdatos
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-medium transition-colors duration-200 ${
+                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 relative ${
                   isActive(item.href)
-                    ? 'text-blue-600 border-b-2 border-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
                 {item.name}
+                {isActive(item.href) && (
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full" />
+                )}
               </Link>
             ))}
             
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={`font-medium transition-colors duration-200 ${
+                  <NavigationMenuTrigger className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
                     isServicesActive()
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}>
                     Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[400px]">
+                    <div className="grid gap-2 p-6 w-[420px] bg-white rounded-xl shadow-lg border border-gray-100">
                       {serviceLinks.map((service) => (
                         <NavigationMenuLink key={service.name} asChild>
                           <Link
                             to={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="block select-none space-y-2 rounded-lg p-4 leading-none no-underline outline-none transition-all duration-200 hover:bg-gray-50 hover:shadow-sm group"
                           >
-                            <div className="text-sm font-medium leading-none">{service.name}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            <div className="text-sm font-semibold leading-none text-gray-900 group-hover:text-blue-600 transition-colors">
+                              {service.name}
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-relaxed text-gray-500">
                               {service.name === 'All Services' && 'Overview of all our validation and compliance services'}
                               {service.name === 'Background Validation' && 'Comprehensive background checks and identity verification'}
-                              {service.name === 'Compliance Services' && 'LAFT, KYC, AML and regulatory compliance solutions'}
+                              {service.name === 'Compliance Services' && 'SARLAFT, KYC, AML and regulatory compliance solutions'}
                             </p>
                           </Link>
                         </NavigationMenuLink>
@@ -100,23 +111,25 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={`font-medium transition-colors duration-200 ${
+                  <NavigationMenuTrigger className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
                     isUseCasesActive()
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}>
                     Use Cases
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid gap-3 p-4 w-[400px]">
+                    <div className="grid gap-2 p-6 w-[420px] bg-white rounded-xl shadow-lg border border-gray-100">
                       {useCaseLinks.map((useCase) => (
                         <NavigationMenuLink key={useCase.name} asChild>
                           <Link
                             to={useCase.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="block select-none space-y-2 rounded-lg p-4 leading-none no-underline outline-none transition-all duration-200 hover:bg-gray-50 hover:shadow-sm group"
                           >
-                            <div className="text-sm font-medium leading-none">{useCase.name}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            <div className="text-sm font-semibold leading-none text-gray-900 group-hover:text-blue-600 transition-colors">
+                              {useCase.name}
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-relaxed text-gray-500">
                               {useCase.name === 'All Use Cases' && 'Explore validation solutions across different industries'}
                               {useCase.name === 'HR & Recruitment' && 'Background screening and verification for hiring decisions'}
                               {useCase.name === 'Financial Services' && 'KYC, AML, and compliance solutions for financial institutions'}
@@ -132,40 +145,44 @@ const Header = () => {
             </NavigationMenu>
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <Button 
+              variant="ghost" 
+              className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 font-medium px-6"
+            >
               Log In
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium px-6 shadow-sm hover:shadow-md transition-all duration-200">
               Get Started
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-gray-900" />
+              <X className="w-6 h-6 text-gray-700" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-900" />
+              <Menu className="w-6 h-6 text-gray-700" />
             )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+          <div className="lg:hidden">
+            <div className="px-2 pt-4 pb-6 space-y-2 bg-white border-t border-gray-100 rounded-b-xl shadow-lg">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 font-medium ${
+                  className={`block px-4 py-3 rounded-lg font-medium text-sm transition-all duration-200 ${
                     isActive(item.href)
                       ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -173,13 +190,15 @@ const Header = () => {
                 </Link>
               ))}
               
-              <div className="px-3 py-2">
-                <div className="font-medium text-gray-900 mb-2">Services</div>
+              <div className="pt-2 border-t border-gray-100 mt-4">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  Services
+                </div>
                 {serviceLinks.map((service) => (
                   <Link
                     key={service.name}
                     to={service.href}
-                    className="block px-3 py-1 text-sm text-gray-600 hover:text-blue-600"
+                    className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {service.name}
@@ -187,13 +206,15 @@ const Header = () => {
                 ))}
               </div>
 
-              <div className="px-3 py-2">
-                <div className="font-medium text-gray-900 mb-2">Use Cases</div>
+              <div className="pt-2 border-t border-gray-100 mt-4">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                  Use Cases
+                </div>
                 {useCaseLinks.map((useCase) => (
                   <Link
                     key={useCase.name}
                     to={useCase.href}
-                    className="block px-3 py-1 text-sm text-gray-600 hover:text-blue-600"
+                    className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {useCase.name}
@@ -201,11 +222,11 @@ const Header = () => {
                 ))}
               </div>
               
-              <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" className="w-full">
+              <div className="pt-4 border-t border-gray-100 mt-4 space-y-3">
+                <Button variant="ghost" className="w-full justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-50">
                   Log In
                 </Button>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-sm">
                   Get Started
                 </Button>
               </div>
