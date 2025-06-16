@@ -78,6 +78,22 @@ const Footer = () => {
                   Due Diligence
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/services/kyc')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  KYC Services
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/services/global-watchlist-screening')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Global Watchlist Screening
+                </button>
+              </li>
             </ul>
           </div>
 
