@@ -1,111 +1,89 @@
 
-import { Users, Building, Shield, CheckCircle } from 'lucide-react';
+import { Search, Shield, Database, Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const KYCOverview = () => {
-  const services = [
-    {
-      icon: Users,
-      title: "Know Your Customer (KYC)",
-      description: "Comprehensive individual identity verification to prevent money laundering and terrorism financing while ensuring seamless customer onboarding.",
-      features: [
-        "Identity document verification",
-        "Biometric authentication",
-        "Address verification",
-        "Background screening",
-        "Sanctions list checking",
-        "PEPs identification"
-      ]
-    },
-    {
-      icon: Building,
-      title: "Know Your Business (KYB)",
-      description: "Thorough business entity verification and compliance checking for corporate clients, partnerships, and B2B relationships.",
-      features: [
-        "Business registration verification",
-        "Corporate structure analysis",
-        "Beneficial ownership identification",
-        "Financial standing assessment",
-        "Regulatory compliance checking",
-        "Risk assessment and scoring"
-      ]
-    }
-  ];
-
-  const complianceAreas = [
-    {
-      icon: Shield,
-      title: "Anti-Money Laundering",
-      description: "Comprehensive AML compliance and monitoring"
-    },
-    {
-      icon: CheckCircle,
-      title: "Counter-Terrorism Financing",
-      description: "CTF screening and prevention measures"
-    },
-    {
-      icon: Users,
-      title: "Customer Due Diligence",
-      description: "Enhanced CDD for high-risk relationships"
-    }
+  const stats = [
+    { number: "200+", label: "KYC Verification Sources" },
+    { number: "8+", label: "Years KYC Experience" },
+    { number: "99.9%", label: "Identity Verification Accuracy" },
+    { number: "24/7", label: "KYC Support & Monitoring" }
   ];
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Essential KYC & KYB Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Cornerstone compliance processes that verify customer and business partner identities, 
-            preventing illicit activities while enabling secure, compliant business relationships.
-          </p>
-        </div>
-
-        {/* Service Types */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <div>
+              <div className="inline-flex items-center space-x-2 bg-indigo-100 rounded-full px-4 py-2 mb-4">
+                <Search className="w-4 h-4 text-indigo-600" />
+                <span className="text-indigo-800 text-sm font-medium">Advanced KYC Solutions</span>
               </div>
               
-              <p className="text-gray-600 mb-6 text-lg">{service.description}</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Complete KYC & Customer Verification Services
+              </h2>
               
-              <div className="space-y-3">
-                <h4 className="font-semibold text-gray-900 text-lg">Key Components:</h4>
-                <div className="grid gap-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </div>
-                  ))}
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Tusdatos provides comprehensive <Link to="/glossary#kyc" className="text-blue-600 hover:text-blue-800 underline">KYC (Know Your Customer)</Link> and <Link to="/glossary#kyb" className="text-blue-600 hover:text-blue-800 underline">KYB (Know Your Business)</Link> verification 
+                services for complete customer due diligence. Our advanced platform ensures regulatory compliance 
+                while streamlining customer onboarding and identity verification processes.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                From basic identity verification to comprehensive <Link to="/glossary#pep" className="text-blue-600 hover:text-blue-800 underline">PEP</Link> screening and <Link to="/glossary#aml" className="text-blue-600 hover:text-blue-800 underline">AML</Link> compliance, 
+                our KYC solutions help <Link to="/glossary#fintech" className="text-blue-600 hover:text-blue-800 underline">fintech</Link> companies and financial institutions meet regulatory requirements 
+                while providing seamless customer experiences.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Essential compliance frameworks: <Link to="/glossary#sarlaft" className="text-blue-600 hover:text-blue-800 underline">SARLAFT</Link>, <Link to="/glossary#laft" className="text-blue-600 hover:text-blue-800 underline">LAFT</Link>, and <Link to="/glossary#due-diligence" className="text-blue-600 hover:text-blue-800 underline">due diligence</Link> requirements.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
+                Start KYC Implementation
+              </Button>
+              <Button variant="outline" size="lg">
+                Schedule KYC Demo
+              </Button>
+            </div>
+          </div>
+          
+          <div className="space-y-8">
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-indigo-600 mb-2">{stat.number}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">KYC Services Include:</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Search className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Customer identity verification and validation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Database className="w-5 h-5 text-blue-500" />
+                  <span className="text-gray-700">Business verification and KYB compliance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-purple-500" />
+                  <span className="text-gray-700">PEP screening and sanctions list checking</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Ongoing customer monitoring and compliance</span>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Compliance Areas */}
-        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Core Compliance Areas
-          </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {complianceAreas.map((area, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <area.icon className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-lg">{area.title}</h4>
-                <p className="text-gray-600">{area.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

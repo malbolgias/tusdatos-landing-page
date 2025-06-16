@@ -1,111 +1,89 @@
 
-import { FileSearch, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Search, Shield, Database, Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const DueDiligenceOverview = () => {
-  const services = [
-    {
-      icon: FileSearch,
-      title: "Standard Due Diligence",
-      description: "Comprehensive counterparty evaluation to identify potential red flags related to fraud, corruption, or money laundering.",
-      features: [
-        "Public and private information analysis",
-        "Corporate structure evaluation",
-        "Legal history assessment",
-        "Basic sanctions screening",
-        "Media monitoring",
-        "Business risk evaluation"
-      ]
-    },
-    {
-      icon: Shield,
-      title: "Enhanced Due Diligence",
-      description: "Deep, personalized analysis for high-risk counterparties and complex transactions requiring maximum assurance.",
-      features: [
-        "Detailed corporate structure analysis",
-        "Comprehensive legal histories",
-        "Advanced sanctions screening",
-        "In-depth media exposure analysis",
-        "PEPs verification",
-        "Detailed supporting documentation"
-      ]
-    }
-  ];
-
-  const useCases = [
-    {
-      icon: AlertTriangle,
-      title: "Investment Processes",
-      description: "Critical evaluation for major investment decisions"
-    },
-    {
-      icon: CheckCircle,
-      title: "Mergers & Acquisitions",
-      description: "Comprehensive risk assessment for M&A transactions"
-    },
-    {
-      icon: Shield,
-      title: "Strategic Alliances",
-      description: "Partner evaluation for business partnerships"
-    }
+  const stats = [
+    { number: "500+", label: "Data Sources & Databases" },
+    { number: "10+", label: "Years Due Diligence Experience" },
+    { number: "99.8%", label: "Investigation Accuracy Rate" },
+    { number: "24/7", label: "Due Diligence Support" }
   ];
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Due Diligence Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From standard evaluations to enhanced scrutiny, our due diligence services provide 
-            the intelligence needed for informed, low-risk business decisions.
-          </p>
-        </div>
-
-        {/* Service Types */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <div>
+              <div className="inline-flex items-center space-x-2 bg-purple-100 rounded-full px-4 py-2 mb-4">
+                <Search className="w-4 h-4 text-purple-600" />
+                <span className="text-purple-800 text-sm font-medium">Comprehensive Investigation Services</span>
               </div>
               
-              <p className="text-gray-600 mb-6 text-lg">{service.description}</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Complete Due Diligence & Enhanced Investigation Services
+              </h2>
               
-              <div className="space-y-3">
-                <h4 className="font-semibold text-gray-900 text-lg">Key Components:</h4>
-                <div className="grid gap-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </div>
-                  ))}
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Tusdatos provides comprehensive <Link to="/glossary#due-diligence" className="text-blue-600 hover:text-blue-800 underline">due diligence</Link> and <Link to="/glossary#enhanced-due-diligence" className="text-blue-600 hover:text-blue-800 underline">enhanced due diligence</Link> services for complete 
+                counterparty evaluation. Our investigations combine public and private data analysis to provide thorough risk assessment 
+                and compliance validation for business relationships.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                From basic <Link to="/glossary#kyc" className="text-blue-600 hover:text-blue-800 underline">KYC</Link> verification to comprehensive <Link to="/glossary#pep" className="text-blue-600 hover:text-blue-800 underline">PEP</Link> screening and <Link to="/glossary#kyb" className="text-blue-600 hover:text-blue-800 underline">KYB</Link> validation, 
+                our due diligence solutions help organizations make informed decisions while maintaining regulatory compliance 
+                and minimizing business risks.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Essential for compliance: <Link to="/glossary#aml" className="text-blue-600 hover:text-blue-800 underline">AML</Link> requirements, <Link to="/glossary#laft" className="text-blue-600 hover:text-blue-800 underline">LAFT</Link> procedures, and <Link to="/glossary#ofac" className="text-blue-600 hover:text-blue-800 underline">OFAC</Link> sanctions screening.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                Start Due Diligence Investigation
+              </Button>
+              <Button variant="outline" size="lg">
+                Request Investigation Quote
+              </Button>
+            </div>
+          </div>
+          
+          <div className="space-y-8">
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">Due Diligence Services Include:</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Search className="w-5 h-5 text-green-500" />
+                  <span className="text-gray-700">Comprehensive counterparty investigation and analysis</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Database className="w-5 h-5 text-blue-500" />
+                  <span className="text-gray-700">Enhanced due diligence for high-risk relationships</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-purple-500" />
+                  <span className="text-gray-700">PEP screening and sanctions list verification</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-orange-500" />
+                  <span className="text-gray-700">Business relationship risk assessment and monitoring</span>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Use Cases */}
-        <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Ideal for High-Stakes Business Scenarios
-          </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-lg">{useCase.title}</h4>
-                <p className="text-gray-600">{useCase.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
