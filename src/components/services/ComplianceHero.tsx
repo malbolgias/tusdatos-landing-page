@@ -31,7 +31,7 @@ const ComplianceHero = () => {
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
                 Start Compliance Validation
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-3 rounded-lg font-semibold">
+              <Button size="lg" variant="green-outline-on-dark" className="px-8 py-3 rounded-lg font-semibold">
                 Compliance Consultation
               </Button>
             </div>

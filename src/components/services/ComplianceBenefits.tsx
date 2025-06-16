@@ -1,5 +1,6 @@
 
 import { Shield, TrendingUp, Clock, Users, CheckCircle, Database } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const ComplianceBenefits = () => {
   const benefits = [
@@ -88,12 +89,12 @@ const ComplianceBenefits = () => {
             KYC, AML, and regulatory compliance solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-800 hover:bg-gray-100 hover:text-green-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <Button size="lg" variant="green-on-dark" className="px-8 py-3 font-semibold">
               Get Compliance Assessment
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </Button>
+            <Button size="lg" variant="green-outline-on-dark" className="px-8 py-3 font-semibold">
               View Case Studies
-            </button>
+            </Button>
           </div>
         </div>
       </div>
