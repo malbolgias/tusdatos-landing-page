@@ -1,6 +1,7 @@
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -45,8 +46,12 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-              <Shield className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 group-hover:scale-105 transition-transform duration-200">
+              <img 
+                src="/lovable-uploads/8fb82d0c-d108-4c4e-ba95-5a9abbe63e9d.png" 
+                alt="Tusdatos Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Tusdatos

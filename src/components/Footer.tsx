@@ -1,4 +1,5 @@
-import { Shield, Mail, Phone } from 'lucide-react';
+
+import { Mail, Phone } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
@@ -23,7 +24,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-5 gap-8">
           <div className="space-y-4">
             <button onClick={() => handleLinkClick('/')} className="flex items-center space-x-2">
-              <Shield className="w-8 h-8 text-blue-400" />
+              <div className="w-8 h-8">
+                <img 
+                  src="/lovable-uploads/8fb82d0c-d108-4c4e-ba95-5a9abbe63e9d.png" 
+                  alt="Tusdatos Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span className="text-2xl font-bold">Tusdatos</span>
             </button>
             <p className="text-gray-400">
