@@ -1,3 +1,4 @@
+
 import { Mail, Phone } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -168,6 +169,14 @@ const Footer = () => {
                   className="hover:text-white transition-colors text-left"
                 >
                   Features
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/glossary')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Glossary
                 </button>
               </li>
             </ul>

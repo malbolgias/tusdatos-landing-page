@@ -11,6 +11,7 @@ const Sitemap = () => {
       { name: 'Features', href: '/features' },
       { name: 'Pricing', href: '/pricing' },
       { name: 'Contact', href: '/contact' },
+      { name: 'Glossary', href: '/glossary' },
     ],
     'Services': [
       { name: 'All Services', href: '/services' },

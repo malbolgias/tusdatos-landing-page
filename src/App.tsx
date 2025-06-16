@@ -20,6 +20,7 @@ import HRRecruitment from "./pages/HRRecruitment";
 import FinancialServices from "./pages/FinancialServices";
 import TenantScreening from "./pages/TenantScreening";
 import Sitemap from "./pages/Sitemap";
+import Glossary from "./pages/Glossary";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/use-cases/financial-services" element={<FinancialServices />} />
           <Route path="/use-cases/tenant-screening" element={<TenantScreening />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/glossary" element={<Glossary />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
