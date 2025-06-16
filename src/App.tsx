@@ -14,6 +14,7 @@ import BackgroundValidation from "./pages/BackgroundValidation";
 import ComplianceServices from "./pages/ComplianceServices";
 import DueDiligence from "./pages/DueDiligence";
 import KYC from "./pages/KYC";
+import GlobalWatchlistScreening from "./pages/GlobalWatchlistScreening";
 import UseCases from "./pages/UseCases";
 import HRRecruitment from "./pages/HRRecruitment";
 import FinancialServices from "./pages/FinancialServices";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/services/compliance" element={<ComplianceServices />} />
           <Route path="/services/due-diligence" element={<DueDiligence />} />
           <Route path="/services/kyc" element={<KYC />} />
+          <Route path="/services/global-watchlist-screening" element={<GlobalWatchlistScreening />} />
           <Route path="/features" element={<Features />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
