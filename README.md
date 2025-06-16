@@ -1,73 +1,160 @@
-# Welcome to your Lovable project
 
-## Project info
+# Tusdatos - Data Validation & Compliance Platform
 
-**URL**: https://lovable.dev/projects/8e469843-9778-4936-a9ac-71cad8317303
+**Your Strategic Partner in Background Verification & Compliance Solutions**
 
-## How can I edit this code?
+## About Tusdatos
 
-There are several ways of editing your application.
+Tusdatos is Colombia's leading data validation and background check technology company, founded in 2018 by Santiago Hernández Zambrano. We specialize in comprehensive background verification, due diligence services, and regulatory compliance solutions including LAFT, KYC, and AML validation across Colombia and Ecuador.
 
-**Use Lovable**
+### Our Mission
+Build secure relationships using data and technology.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8e469843-9778-4936-a9ac-71cad8317303) and start prompting.
+### Our Vision
+Create an essential ecosystem for knowledge and validation services.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Overview
 
-**Use your preferred IDE**
+This is the official Tusdatos web platform, built with modern web technologies to provide comprehensive information about our data validation and compliance services. The platform showcases our full range of background verification solutions, use cases across different industries, and serves as the primary gateway for potential clients to understand and engage with our services.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Key Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Comprehensive Service Portfolio**: Background validation, compliance services, due diligence, KYC, and global watchlist screening
+- **Industry-Specific Use Cases**: Solutions for HR & Recruitment, Financial Services, and Tenant Screening
+- **Educational Content**: Detailed glossary of compliance and validation terminology
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Professional UI/UX**: Built with modern design principles and accessibility in mind
 
-Follow these steps:
+### Our Services
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+- **Background Validation**: Comprehensive background checks for individuals, companies, and vehicles
+- **Compliance Services**: SARLAFT, LAFT, and PTEE compliance solutions
+- **Due Diligence**: Complete counterparty evaluation and risk assessment
+- **KYC Services**: Know Your Customer solutions for regulatory compliance
+- **Global Watchlist Screening**: International sanctions and high-risk profile screening
+
+### Recognition
+
+- 🏆 **Forbes Top 100 Startups** - Recognized for innovation in background check technology
+- 🏆 **LatamDigital Awards Winner** - Excellence in data validation solutions
+- 📊 **300+ Data Sources** - Comprehensive background validation database
+- ✅ **99.9% Accuracy** - Verified background check reliability
+
+## Technical Stack
+
+This project is built with modern web technologies:
+
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite for fast development and optimized builds
+- **Styling**: Tailwind CSS for responsive design
+- **UI Components**: shadcn/ui component library
+- **Routing**: React Router for client-side navigation
+- **State Management**: TanStack Query for server state management
+- **Icons**: Lucide React for consistent iconography
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components and routes
+├── content/            # Static content and documentation
+├── utils/              # Utility functions and helpers
+└── lib/                # Core library functions
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server with hot reloading
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint for code quality checks
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deployment
 
-## What technologies are used for this project?
+### Using Lovable Platform
 
-This project is built with:
+This project is hosted on Lovable and can be deployed directly through the platform:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Visit the [Lovable Project](https://lovable.dev/projects/8e469843-9778-4936-a9ac-71cad8317303)
+2. Click on Share → Publish to deploy
 
-## How can I deploy this project?
+### Custom Domain
 
-Simply open [Lovable](https://lovable.dev/projects/8e469843-9778-4936-a9ac-71cad8317303) and click on Share -> Publish.
+To connect a custom domain:
+1. Navigate to Project > Settings > Domains in Lovable
+2. Click "Connect Domain"
+3. Follow the setup instructions
 
-## Can I connect a custom domain to my Lovable project?
+Read more: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
 
-Yes, you can!
+## Development Workflow
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Using Lovable
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The fastest way to make changes is through the Lovable interface:
+- Visit the [Lovable Project](https://lovable.dev/projects/8e469843-9778-4936-a9ac-71cad8317303)
+- Use the AI-powered editor to make changes
+- Changes are automatically committed and deployed
+
+### Local Development
+
+For developers who prefer local development:
+1. Make changes to the codebase
+2. Test locally using `npm run dev`
+3. Commit and push changes to GitHub
+4. Changes will automatically sync to Lovable
+
+### GitHub Integration
+
+This project features bidirectional sync with GitHub:
+- Changes made in Lovable automatically push to GitHub
+- Changes pushed to GitHub automatically sync to Lovable
+- Use GitHub Actions for CI/CD workflows
+
+## Contact Information
+
+- **Website**: [tusdatos.co](https://tusdatos.co)
+- **Email**: comercial@tusdatos.co
+- **Phone**: +57 305 436 2276
+- **Location**: Bogotá, Colombia
+- **Business Hours**: Monday-Friday, 8am-6pm
+
+## Contributing
+
+This project is maintained by the Tusdatos team. For questions about our services or platform, please contact us through the official channels listed above.
+
+## License
+
+© 2024 Tusdatos. All rights reserved.
+
+---
+
+*Built with ❤️ by the Tusdatos team - Your strategic ally in validation and compliance since 2018.*
