@@ -1,14 +1,8 @@
 
 import { Shield, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleEmailClick = () => {
     window.location.href = 'mailto:comercial@tusdatos.co';
   };
@@ -22,10 +16,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <Shield className="w-8 h-8 text-blue-400" />
               <span className="text-2xl font-bold">Tusdatos</span>
-            </div>
+            </Link>
             <p className="text-gray-400">
               Your strategic ally in validation and compliance since 2018.
             </p>
@@ -41,36 +35,24 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/services" className="hover:text-white transition-colors">
                   Background Validation
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/services" className="hover:text-white transition-colors">
                   Compliance Checks
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/services" className="hover:text-white transition-colors">
                   Due Diligence
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/services" className="hover:text-white transition-colors">
                   LAFT Implementation
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,36 +61,24 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <button 
-                  onClick={() => scrollToSection('about')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/about" className="hover:text-white transition-colors">
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('about')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/about" className="hover:text-white transition-colors">
                   Recognition
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('features')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/features" className="hover:text-white transition-colors">
                   Coverage
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('features')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
+                <Link to="/features" className="hover:text-white transition-colors">
                   Use Cases
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
