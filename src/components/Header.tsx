@@ -27,6 +27,7 @@ const Header = () => {
     { name: 'All Services', href: '/services' },
     { name: 'Background Validation', href: '/services/background-validation' },
     { name: 'Compliance Services', href: '/services/compliance' },
+    { name: 'Due Diligence', href: '/services/due-diligence' },
   ];
 
   const useCaseLinks = [
@@ -102,6 +103,7 @@ const Header = () => {
                               {service.name === 'All Services' && 'Overview of all our validation and compliance services'}
                               {service.name === 'Background Validation' && 'Comprehensive background checks and identity verification'}
                               {service.name === 'Compliance Services' && 'SARLAFT, KYC, AML and regulatory compliance solutions'}
+                              {service.name === 'Due Diligence' && 'Comprehensive counterparty evaluation and risk assessment'}
                             </p>
                           </Link>
                         </NavigationMenuLink>

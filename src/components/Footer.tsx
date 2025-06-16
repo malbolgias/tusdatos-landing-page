@@ -1,4 +1,3 @@
-
 import { Mail, Phone } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -69,6 +68,14 @@ const Footer = () => {
                   className="hover:text-white transition-colors text-left"
                 >
                   Compliance Services
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/services/due-diligence')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Due Diligence
                 </button>
               </li>
             </ul>

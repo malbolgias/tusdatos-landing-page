@@ -12,6 +12,7 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import BackgroundValidation from "./pages/BackgroundValidation";
 import ComplianceServices from "./pages/ComplianceServices";
+import DueDiligence from "./pages/DueDiligence";
 import UseCases from "./pages/UseCases";
 import HRRecruitment from "./pages/HRRecruitment";
 import FinancialServices from "./pages/FinancialServices";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/services/background-validation" element={<BackgroundValidation />} />
           <Route path="/services/compliance" element={<ComplianceServices />} />
+          <Route path="/services/due-diligence" element={<DueDiligence />} />
           <Route path="/features" element={<Features />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
