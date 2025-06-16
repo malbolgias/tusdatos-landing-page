@@ -10,6 +10,8 @@ import Services from "./pages/Services";
 import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import BackgroundValidation from "./pages/BackgroundValidation";
+import ComplianceServices from "./pages/ComplianceServices";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/background-validation" element={<BackgroundValidation />} />
+          <Route path="/services/compliance" element={<ComplianceServices />} />
           <Route path="/features" element={<Features />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
