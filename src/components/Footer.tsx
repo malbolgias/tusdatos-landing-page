@@ -1,4 +1,3 @@
-
 import { Shield, Mail, Phone } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -21,7 +20,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           <div className="space-y-4">
             <button onClick={() => handleLinkClick('/')} className="flex items-center space-x-2">
               <Shield className="w-8 h-8 text-blue-400" />
@@ -65,12 +64,42 @@ const Footer = () => {
                   Compliance Services
                 </button>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4">Use Cases</h3>
+            <ul className="space-y-2 text-gray-400">
               <li>
                 <button 
-                  onClick={() => handleLinkClick('/services/compliance')}
+                  onClick={() => handleLinkClick('/use-cases')}
                   className="hover:text-white transition-colors text-left"
                 >
-                  LAFT Implementation
+                  All Use Cases
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/use-cases/hr-recruitment')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  HR & Recruitment
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/use-cases/financial-services')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Financial Services
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLinkClick('/use-cases/tenant-screening')}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Tenant Screening
                 </button>
               </li>
             </ul>
@@ -108,7 +137,7 @@ const Footer = () => {
                   onClick={() => handleLinkClick('/features')}
                   className="hover:text-white transition-colors text-left"
                 >
-                  Use Cases
+                  Features
                 </button>
               </li>
             </ul>
