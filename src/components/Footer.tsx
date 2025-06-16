@@ -2,6 +2,21 @@
 import { Shield, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:comercial@tusdatos.co';
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+573054362276';
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -25,20 +40,76 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Background Validation</li>
-              <li>Compliance Checks</li>
-              <li>Due Diligence</li>
-              <li>LAFT Implementation</li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Background Validation
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Compliance Checks
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Due Diligence
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  LAFT Implementation
+                </button>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>About Us</li>
-              <li>Recognition</li>
-              <li>Coverage</li>
-              <li>Use Cases</li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Recognition
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('features')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Coverage
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('features')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Use Cases
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -47,11 +118,21 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>comercial@tusdatos.co</span>
+                <button 
+                  onClick={handleEmailClick}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  comercial@tusdatos.co
+                </button>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+57 305 436 2276</span>
+                <button 
+                  onClick={handlePhoneClick}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  +57 305 436 2276
+                </button>
               </div>
               <div className="text-sm">
                 Bogotá, Colombia<br/>
