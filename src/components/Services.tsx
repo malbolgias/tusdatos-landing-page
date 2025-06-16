@@ -62,23 +62,26 @@ const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 6).map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4">
-                  <service.icon className={`w-6 h-6 ${service.color}`} />
-                </div>
-                <CardTitle className="text-xl font-semibold text-gray-900">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+          {services.slice(0, 6).map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4">
+                    <IconComponent className={`w-6 h-6 ${service.color}`} />
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-gray-900">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
         
         {services.length > 6 && (
