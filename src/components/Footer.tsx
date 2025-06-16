@@ -1,8 +1,10 @@
 
 import { Shield, Mail, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const handleEmailClick = () => {
     window.location.href = 'mailto:comercial@tusdatos.co';
   };
@@ -11,15 +13,20 @@ const Footer = () => {
     window.location.href = 'tel:+573054362276';
   };
 
+  const handleLinkClick = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2">
+            <button onClick={() => handleLinkClick('/')} className="flex items-center space-x-2">
               <Shield className="w-8 h-8 text-blue-400" />
               <span className="text-2xl font-bold">Tusdatos</span>
-            </Link>
+            </button>
             <p className="text-gray-400">
               Your strategic ally in validation and compliance since 2018.
             </p>
@@ -35,24 +42,36 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/services')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   All Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services/background-validation" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/services/background-validation')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   Background Validation
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services/compliance" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/services/compliance')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   Compliance Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services/compliance" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/services/compliance')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   LAFT Implementation
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -61,24 +80,36 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/about')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   About Us
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/about')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   Recognition
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/features" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/features')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   Coverage
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/features" className="hover:text-white transition-colors">
+                <button 
+                  onClick={() => handleLinkClick('/features')}
+                  className="hover:text-white transition-colors text-left"
+                >
                   Use Cases
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
