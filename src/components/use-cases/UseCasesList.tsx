@@ -18,7 +18,7 @@ const UseCasesList = () => {
       icon: CreditCard,
       title: "Financial Services",
       description: "Regulatory compliance solutions for financial institutions and fintech companies.",
-      features: ["KYC compliance", "AML monitoring", "LAFT implementation", "Risk assessment"),
+      features: ["KYC compliance", "AML monitoring", "LAFT implementation", "Risk assessment"],
       path: "/use-cases/financial-services"
     },
     {
