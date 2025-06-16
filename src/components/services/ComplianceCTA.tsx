@@ -33,14 +33,14 @@ const ComplianceCTA = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 font-semibold text-lg"
+                className="bg-white text-green-800 hover:bg-gray-100 hover:text-green-900 px-8 py-3 font-semibold text-lg border-0"
               >
                 Start Compliance Validation
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 font-semibold text-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-3 font-semibold text-lg"
               >
                 Schedule Consultation
               </Button>

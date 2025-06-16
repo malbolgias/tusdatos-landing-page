@@ -88,10 +88,10 @@ const ComplianceBenefits = () => {
             KYC, AML, and regulatory compliance solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="bg-white text-green-800 hover:bg-gray-100 hover:text-green-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Get Compliance Assessment
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-3 rounded-lg font-semibold transition-colors">
               View Case Studies
             </button>
           </div>
