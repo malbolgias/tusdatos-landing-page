@@ -7,8 +7,8 @@ const ComplianceFAQ = () => {
 
   const faqs = [
     {
-      question: "What is LAFT compliance and why is it important?",
-      answer: "LAFT (Ley Anti-Lavado de Activos y Financiación del Terrorismo) is Colombia's anti-money laundering and counter-terrorism financing law. It requires businesses to implement compliance systems to prevent money laundering and terrorist financing. Our platform helps you meet all LAFT requirements with automated monitoring and reporting."
+      question: "What is SARLAFT compliance and why is it important?",
+      answer: "SARLAFT (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo) is Colombia's risk management system for money laundering and terrorism financing. It requires businesses to implement compliance systems to prevent money laundering and terrorist financing. Our platform helps you meet all SARLAFT requirements with automated monitoring and reporting."
     },
     {
       question: "How does your KYC validation process work?",
@@ -52,7 +52,7 @@ const ComplianceFAQ = () => {
             Compliance FAQ
           </h2>
           <p className="text-lg text-gray-600">
-            Common questions about our LAFT, KYC, AML, and compliance validation services
+            Common questions about our SARLAFT, KYC, AML, and compliance validation services
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { Award, Users, Shield, Database } from 'lucide-react';
 const ComplianceSocialValidation = () => {
   const testimonials = [
     {
-      quote: "Tusdatos compliance solutions transformed our LAFT implementation. Their KYC validation platform reduced our regulatory risks by 95% while ensuring full AML compliance.",
+      quote: "Tusdatos compliance solutions transformed our SARLAFT implementation. Their KYC validation platform reduced our regulatory risks by 95% while ensuring full AML compliance.",
       author: "Fernando Gutierrez",
       position: "Compliance Director, Colombian Bank"
     },
@@ -23,7 +23,7 @@ const ComplianceSocialValidation = () => {
   const achievements = [
     {
       icon: Shield,
-      title: "Full LAFT Compliance",
+      title: "Full SARLAFT Compliance",
       description: "Complete anti-money laundering validation"
     },
     {
@@ -63,7 +63,7 @@ const ComplianceSocialValidation = () => {
             Trusted for Compliance Excellence
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Leading financial institutions trust Tusdatos for comprehensive LAFT, KYC, AML compliance, 
+            Leading financial institutions trust Tusdatos for comprehensive SARLAFT, KYC, AML compliance, 
             sanctions screening, and regulatory validation services.
           </p>
         </div>

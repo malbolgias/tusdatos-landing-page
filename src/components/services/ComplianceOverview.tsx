@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const ComplianceOverview = () => {
   const stats = [
     { number: "300+", label: "Compliance Data Sources" },
-    { number: "100%", label: "LAFT Regulatory Coverage" },
+    { number: "100%", label: "SARLAFT Regulatory Coverage" },
     { number: "24/7", label: "Compliance Monitoring" },
     { number: "99.9%", label: "Sanctions Screening Accuracy" }
   ];
@@ -26,7 +26,7 @@ const ComplianceOverview = () => {
               </h2>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Tusdatos provides comprehensive compliance solutions including LAFT implementation, KYC validation, 
+                Tusdatos provides comprehensive compliance solutions including SARLAFT implementation, KYC validation, 
                 AML screening, PTEE compliance, and due diligence services. Our platform accesses global sanctions lists, 
                 PEPs databases, and regulatory compliance sources to ensure full adherence to Colombian and international regulations.
               </p>
@@ -62,7 +62,7 @@ const ComplianceOverview = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Shield className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">LAFT & AML compliance implementation and monitoring</span>
+                  <span className="text-gray-700">SARLAFT & AML compliance implementation and monitoring</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Database className="w-5 h-5 text-blue-500" />

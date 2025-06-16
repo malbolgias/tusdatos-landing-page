@@ -1,3 +1,4 @@
+
 import { Shield, TrendingUp, Clock, Users, CheckCircle, Database } from 'lucide-react';
 
 const ComplianceBenefits = () => {
@@ -5,7 +6,7 @@ const ComplianceBenefits = () => {
     {
       icon: Shield,
       title: "Regulatory Compliance Assurance",
-      description: "Ensure full compliance with LAFT, AML, KYC, and PTEE regulations. Our platform helps you meet all Colombian and international regulatory requirements with automated monitoring and reporting.",
+      description: "Ensure full compliance with SARLAFT (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo), AML, KYC, and PTEE regulations. Our platform helps you meet all Colombian and international regulatory requirements with automated monitoring and reporting.",
       metrics: "99.9% compliance accuracy"
     },
     {
@@ -49,7 +50,7 @@ const ComplianceBenefits = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our comprehensive compliance platform delivers measurable benefits for financial institutions, 
-            regulated businesses, and organizations requiring LAFT, KYC, and AML compliance validation.
+            regulated businesses, and organizations requiring SARLAFT, KYC, and AML compliance validation.
           </p>
         </div>
 
@@ -83,7 +84,7 @@ const ComplianceBenefits = () => {
             Ready to Transform Your Compliance Operations?
           </h3>
           <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
-            Join leading financial institutions who trust Tusdatos for comprehensive LAFT, 
+            Join leading financial institutions who trust Tusdatos for comprehensive SARLAFT, 
             KYC, AML, and regulatory compliance solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

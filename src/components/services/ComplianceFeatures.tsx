@@ -5,9 +5,9 @@ const ComplianceFeatures = () => {
   const features = [
     {
       icon: Shield,
-      title: "LAFT & AML Compliance",
-      description: "Complete anti-money laundering validation and LAFT implementation services with real-time monitoring and reporting.",
-      benefits: ["Real-time AML screening", "LAFT regulatory compliance", "Automated risk assessment"]
+      title: "SARLAFT & AML Compliance",
+      description: "Complete anti-money laundering validation and SARLAFT (Sistema de Administración del Riesgo de Lavado de Activos y Financiación del Terrorismo) implementation services with real-time monitoring and reporting.",
+      benefits: ["Real-time AML screening", "SARLAFT regulatory compliance", "Automated risk assessment"]
     },
     {
       icon: Database,
@@ -49,7 +49,7 @@ const ComplianceFeatures = () => {
             Comprehensive Compliance Features
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our compliance platform provides complete LAFT, KYC, AML, and regulatory validation services 
+            Our compliance platform provides complete SARLAFT, KYC, AML, and regulatory validation services 
             with access to global databases and real-time monitoring capabilities.
           </p>
         </div>

@@ -18,7 +18,7 @@ const ComplianceCTA = () => {
           <div className="space-y-6">
             <div className="inline-flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
               <Shield className="w-4 h-4" />
-              <span className="text-sm font-medium">LAFT & Compliance Experts</span>
+              <span className="text-sm font-medium">SARLAFT & Compliance Experts</span>
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
@@ -26,7 +26,7 @@ const ComplianceCTA = () => {
             </h2>
             
             <p className="text-xl text-green-100 leading-relaxed">
-              Start your LAFT, KYC, and AML compliance validation today. Our experts will help you 
+              Start your SARLAFT, KYC, and AML compliance validation today. Our experts will help you 
               implement comprehensive compliance solutions tailored to your business needs.
             </p>
             
@@ -67,7 +67,7 @@ const ComplianceCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">System Implementation</h4>
-                  <p className="text-green-100">Our team implements LAFT, KYC, and AML compliance systems tailored to your needs.</p>
+                  <p className="text-green-100">Our team implements SARLAFT, KYC, and AML compliance systems tailored to your needs.</p>
                 </div>
               </div>
               

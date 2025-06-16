@@ -13,7 +13,7 @@ const ComplianceHero = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center space-x-2 bg-green-500/20 rounded-full px-4 py-2 border border-green-400/30">
                 <Shield className="w-4 h-4 text-green-300" />
-                <span className="text-green-200 text-sm font-medium">LAFT, KYC & AML Compliance Solutions</span>
+                <span className="text-green-200 text-sm font-medium">SARLAFT, KYC & AML Compliance Solutions</span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
@@ -22,7 +22,7 @@ const ComplianceHero = () => {
               </h1>
               
               <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                Ensure full regulatory compliance with our comprehensive LAFT, KYC, AML, and PTEE validation services. 
+                Ensure full regulatory compliance with our comprehensive SARLAFT, KYC, AML, and PTEE validation services. 
                 Access global sanctions lists, PEPs databases, and compliance verification across 300+ sources.
               </p>
             </div>
@@ -45,7 +45,7 @@ const ComplianceHero = () => {
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">LAFT & AML Compliance</h3>
+                    <h3 className="font-semibold">SARLAFT & AML Compliance</h3>
                     <p className="text-gray-400 text-sm">Anti-money laundering validation</p>
                   </div>
                 </div>
