@@ -1,4 +1,3 @@
-
 import { Shield, Search, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -28,10 +27,10 @@ const ComplianceHero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold">
+              <Button size="lg" variant="green-on-dark" className="px-8 py-3 font-semibold">
                 Start Compliance Validation
               </Button>
-              <Button size="lg" variant="green-outline-on-dark" className="px-8 py-3 rounded-lg font-semibold">
+              <Button size="lg" variant="green-outline-on-dark" className="px-8 py-3 font-semibold">
                 Compliance Consultation
               </Button>
             </div>

@@ -15,11 +15,11 @@ const FinancialServicesCTA = () => {
           Start your journey to seamless regulatory compliance today.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-gray-100">
+          <Button size="lg" variant="green-on-dark" className="px-8 py-3 font-semibold">
             Start Compliance Assessment
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-700">
+          <Button size="lg" variant="green-outline-on-dark" className="px-8 py-3 font-semibold">
             Contact Compliance Expert
           </Button>
         </div>

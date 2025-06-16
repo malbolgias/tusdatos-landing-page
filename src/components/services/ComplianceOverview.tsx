@@ -38,10 +38,10 @@ const ComplianceOverview = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-green-700 hover:bg-green-800 text-white">
+              <Button size="lg" variant="default" className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 font-semibold">
                 Start Compliance Validation
               </Button>
-              <Button variant="outline" size="lg" className="border-green-700 text-green-700 hover:bg-green-700 hover:text-white">
+              <Button variant="outline" size="lg" className="border-green-700 text-green-700 hover:bg-green-700 hover:text-white px-8 py-3 font-semibold">
                 View Compliance Solutions
               </Button>
             </div>
