@@ -1,6 +1,7 @@
 
 import Header from '@/components/Header';
 import About from '@/components/About';
+import Team from '@/components/Team';
 import Footer from '@/components/Footer';
 
 const AboutPage = () => {
@@ -9,6 +10,7 @@ const AboutPage = () => {
       <Header />
       <main className="pt-16">
         <About />
+        <Team />
       </main>
       <Footer />
     </div>
