@@ -65,7 +65,7 @@ const Services = () => {
           {services.slice(0, 6).map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
               <CardHeader>
-                <div className={`w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4`}>
+                <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4">
                   <service.icon className={`w-6 h-6 ${service.color}`} />
                 </div>
                 <CardTitle className="text-xl font-semibold text-gray-900">
@@ -85,7 +85,7 @@ const Services = () => {
           <div className="mt-8 flex justify-center">
             <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md max-w-md">
               <CardHeader>
-                <div className={`w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4`}>
+                <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4">
                   <services[6].icon className={`w-6 h-6 ${services[6].color}`} />
                 </div>
                 <CardTitle className="text-xl font-semibold text-gray-900">
