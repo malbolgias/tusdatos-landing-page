@@ -8,10 +8,12 @@ import ComplianceFAQ from '@/components/services/ComplianceFAQ';
 import ComplianceCTA from '@/components/services/ComplianceCTA';
 import ComplianceOverview from '@/components/services/ComplianceOverview';
 import ComplianceBenefits from '@/components/services/ComplianceBenefits';
+import ContrastTestRunner from '@/components/ContrastTestRunner';
 
 const ComplianceServicesPage = () => {
   return (
     <div className="min-h-screen">
+      <ContrastTestRunner />
       <Header />
       <main className="pt-16">
         <ComplianceHero />

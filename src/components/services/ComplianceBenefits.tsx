@@ -1,4 +1,3 @@
-
 import { Shield, TrendingUp, Clock, Users, CheckCircle, Database } from 'lucide-react';
 
 const ComplianceBenefits = () => {
@@ -79,7 +78,7 @@ const ComplianceBenefits = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 md:p-12 text-white text-center">
+        <div className="mt-16 bg-gradient-to-r from-green-700 to-emerald-700 rounded-2xl p-8 md:p-12 text-white text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Transform Your Compliance Operations?
           </h3>
@@ -88,10 +87,10 @@ const ComplianceBenefits = () => {
             KYC, AML, and regulatory compliance solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
               Get Compliance Assessment
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 rounded-lg font-semibold transition-colors">
               View Case Studies
             </button>
           </div>

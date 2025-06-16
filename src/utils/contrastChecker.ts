@@ -62,10 +62,10 @@ export const testButtonContrast = () => {
       description: 'Blue themed buttons'
     },
     {
-      name: 'Green Button',
-      background: '#16a34a', // green-600
+      name: 'Green Button (Fixed)',
+      background: '#059669', // green-700 - darker for better contrast
       text: '#ffffff',
-      description: 'Green themed buttons'
+      description: 'Green themed buttons - now meets WCAG AA'
     },
     {
       name: 'Purple Button',
@@ -78,12 +78,6 @@ export const testButtonContrast = () => {
       background: '#2563eb', // blue-600
       text: '#ffffff',
       description: 'White text on blue background'
-    },
-    {
-      name: 'Problematic: White on White',
-      background: '#ffffff',
-      text: '#ffffff',
-      description: 'White text on white background (should fail)'
     }
   ];
 

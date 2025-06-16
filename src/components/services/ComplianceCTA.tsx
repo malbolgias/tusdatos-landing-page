@@ -12,7 +12,7 @@ const ComplianceCTA = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-green-600 to-emerald-700 text-white">
+    <section className="py-24 bg-gradient-to-br from-green-700 to-emerald-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -33,14 +33,14 @@ const ComplianceCTA = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 font-semibold text-lg"
+                className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 font-semibold text-lg"
               >
                 Start Compliance Validation
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-3 font-semibold text-lg"
+                className="border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 font-semibold text-lg"
               >
                 Schedule Consultation
               </Button>
