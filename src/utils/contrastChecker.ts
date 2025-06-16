@@ -40,82 +40,114 @@ export const meetsWCAGAAA = (contrastRatio: number): boolean => {
   return contrastRatio >= 7; // WCAG AAA standard for normal text
 };
 
-// Test function to check button contrast
+// Test function to check button contrast including hover states
 export const testButtonContrast = () => {
   const buttonTests = [
     {
       name: 'Primary Button',
       background: '#222222', // primary color
       text: '#ffffff',
+      hoverBackground: '#1a1a1a',
       description: 'Default primary button'
     },
     {
       name: 'Secondary Button (White background)',
       background: '#ffffff',
       text: '#222222',
+      hoverBackground: '#f3f4f6',
       description: 'Secondary button on white background'
     },
     {
       name: 'Blue Button',
       background: '#2563eb', // blue-600
       text: '#ffffff',
+      hoverBackground: '#1d4ed8', // blue-700
       description: 'Blue themed buttons'
     },
     {
       name: 'Green Button (Fixed)',
-      background: '#059669', // green-700 - darker for better contrast
+      background: '#047857', // green-700 - darker for better contrast
       text: '#ffffff',
+      hoverBackground: '#065f46', // green-800
       description: 'Green themed buttons - now meets WCAG AA'
     },
     {
       name: 'Purple Button',
-      background: '#9333ea', // purple-600
+      background: '#7c3aed', // purple-600
       text: '#ffffff',
+      hoverBackground: '#6d28d9', // purple-700
       description: 'Purple themed buttons'
     },
     {
-      name: 'White Button on Blue',
-      background: '#2563eb', // blue-600
+      name: 'Destructive Button',
+      background: '#dc2626', // red-600
       text: '#ffffff',
-      description: 'White text on blue background'
+      hoverBackground: '#b91c1c', // red-700
+      description: 'Destructive/error buttons'
+    },
+    {
+      name: 'Ghost Button',
+      background: 'transparent',
+      text: '#374151', // gray-700
+      hoverBackground: '#f3f4f6', // gray-100
+      description: 'Ghost variant buttons'
     }
   ];
 
-  console.log('🎨 Button Contrast Test Results:');
-  console.log('================================');
+  console.log('🎨 Button Contrast Test Results (Normal & Hover States):');
+  console.log('======================================================');
   
   const results = buttonTests.map(test => {
-    const contrastRatio = getContrastRatio(test.background, test.text);
-    const passesAA = meetsWCAGAA(contrastRatio);
-    const passesAAA = meetsWCAGAAA(contrastRatio);
+    const normalContrast = getContrastRatio(test.background === 'transparent' ? '#ffffff' : test.background, test.text);
+    const hoverContrast = getContrastRatio(test.hoverBackground, test.text);
+    const normalPassesAA = meetsWCAGAA(normalContrast);
+    const hoverPassesAA = meetsWCAGAA(hoverContrast);
+    const normalPassesAAA = meetsWCAGAAA(normalContrast);
+    const hoverPassesAAA = meetsWCAGAAA(hoverContrast);
     
-    const status = passesAA ? '✅ PASS' : '❌ FAIL';
-    const grade = passesAAA ? 'AAA' : passesAA ? 'AA' : 'FAIL';
+    const normalStatus = normalPassesAA ? '✅ PASS' : '❌ FAIL';
+    const hoverStatus = hoverPassesAA ? '✅ PASS' : '❌ FAIL';
+    const normalGrade = normalPassesAAA ? 'AAA' : normalPassesAA ? 'AA' : 'FAIL';
+    const hoverGrade = hoverPassesAAA ? 'AAA' : hoverPassesAA ? 'AA' : 'FAIL';
     
-    console.log(`${status} ${test.name}`);
-    console.log(`   Background: ${test.background}, Text: ${test.text}`);
-    console.log(`   Contrast Ratio: ${contrastRatio.toFixed(2)}:1 (${grade})`);
-    console.log(`   ${test.description}`);
+    console.log(`${test.name}:`);
+    console.log(`  Normal: ${normalStatus} - Contrast: ${normalContrast.toFixed(2)}:1 (${normalGrade})`);
+    console.log(`  Hover:  ${hoverStatus} - Contrast: ${hoverContrast.toFixed(2)}:1 (${hoverGrade})`);
+    console.log(`  Colors: ${test.background} → ${test.hoverBackground} (text: ${test.text})`);
+    console.log(`  ${test.description}`);
     console.log('');
     
     return {
       ...test,
-      contrastRatio,
-      passesAA,
-      passesAAA,
-      grade
+      normalContrast,
+      hoverContrast,
+      normalPassesAA,
+      hoverPassesAA,
+      normalPassesAAA,
+      hoverPassesAAA,
+      normalGrade,
+      hoverGrade
     };
   });
 
-  const failedTests = results.filter(result => !result.passesAA);
+  const failedTests = results.filter(result => !result.normalPassesAA || !result.hoverPassesAA);
   
   if (failedTests.length > 0) {
     console.log('⚠️  Failed Contrast Tests:');
     failedTests.forEach(test => {
-      console.log(`- ${test.name}: ${test.contrastRatio.toFixed(2)}:1 (needs 4.5:1 minimum)`);
+      if (!test.normalPassesAA) {
+        console.log(`- ${test.name} (Normal): ${test.normalContrast.toFixed(2)}:1 (needs 4.5:1 minimum)`);
+      }
+      if (!test.hoverPassesAA) {
+        console.log(`- ${test.name} (Hover): ${test.hoverContrast.toFixed(2)}:1 (needs 4.5:1 minimum)`);
+      }
     });
+    console.log('\n💡 Recommended fixes:');
+    console.log('- Use darker background colors for better contrast');
+    console.log('- Consider using white text on dark backgrounds');
+    console.log('- Test colors at https://webaim.org/resources/contrastchecker/');
   } else {
-    console.log('🎉 All button contrast tests passed!');
+    console.log('🎉 All button contrast tests passed for both normal and hover states!');
   }
   
   return results;

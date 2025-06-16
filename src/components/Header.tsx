@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Shield, Menu, X } from 'lucide-react';
@@ -145,15 +144,15 @@ const Header = () => {
             </NavigationMenu>
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with improved contrast */}
           <div className="hidden lg:flex items-center space-x-3">
             <Button 
               variant="ghost" 
-              className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 font-medium px-6"
+              className="text-gray-700 hover:text-gray-900 hover:bg-gray-100 font-medium px-6 transition-all duration-200"
             >
               Log In
             </Button>
-            <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium px-6 shadow-sm hover:shadow-md transition-all duration-200">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 shadow-sm hover:shadow-md transition-all duration-200 border-0">
               Get Started
             </Button>
           </div>
@@ -223,10 +222,10 @@ const Header = () => {
               </div>
               
               <div className="pt-4 border-t border-gray-100 mt-4 space-y-3">
-                <Button variant="ghost" className="w-full justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                <Button variant="ghost" className="w-full justify-center text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-all duration-200">
                   Log In
                 </Button>
-                <Button className="w-full justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-sm">
+                <Button className="w-full justify-center bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all duration-200 border-0">
                   Get Started
                 </Button>
               </div>

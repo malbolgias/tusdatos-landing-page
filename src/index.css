@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,20 +38,21 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* High contrast button colors for accessibility */
+    --button-green: 160 84% 28%; /* green-700: #047857 - meets WCAG AA */
+    --button-green-hover: 160 93% 20%; /* green-800: #065f46 */
+    --button-purple: 248 53% 58%; /* purple-600: #7c3aed - meets WCAG AA */
+    --button-purple-hover: 251 62% 51%; /* purple-700: #6d28d9 */
+    --button-blue: 221 83% 53%; /* blue-600: #2563eb - meets WCAG AA */
+    --button-blue-hover: 224 76% 48%; /* blue-700: #1d4ed8 */
   }
 
   .dark {
@@ -89,6 +91,14 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* High contrast button colors for dark mode */
+    --button-green: 160 84% 35%; /* Lighter green for dark mode */
+    --button-green-hover: 160 84% 40%;
+    --button-purple: 248 53% 65%; /* Lighter purple for dark mode */
+    --button-purple-hover: 248 53% 70%;
+    --button-blue: 221 83% 60%; /* Lighter blue for dark mode */
+    --button-blue-hover: 221 83% 65%;
   }
 }
 
@@ -99,5 +109,20 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Utility classes for high-contrast buttons */
+@layer utilities {
+  .btn-green-accessible {
+    @apply bg-green-700 hover:bg-green-800 text-white;
+  }
+  
+  .btn-purple-accessible {
+    @apply bg-purple-600 hover:bg-purple-700 text-white;
+  }
+  
+  .btn-blue-accessible {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
   }
 }
