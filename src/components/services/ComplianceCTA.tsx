@@ -1,6 +1,7 @@
 
 import { Shield, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const ComplianceCTA = () => {
   const handleEmailClick = () => {
@@ -45,8 +46,12 @@ const ComplianceCTA = () => {
               </h2>
               
               <p className="text-xl text-green-100 leading-relaxed">
-                Start your SARLAFT, KYC, and AML compliance validation today. Our experts will help you 
+                Start your <Link to="/glossary#sarlaft" className="text-white hover:text-green-200 underline">SARLAFT</Link>, <Link to="/glossary#kyc" className="text-white hover:text-green-200 underline">KYC</Link>, and <Link to="/glossary#aml" className="text-white hover:text-green-200 underline">AML</Link> compliance validation today. Our experts will help you 
                 implement comprehensive compliance solutions tailored to your business needs.
+              </p>
+
+              <p className="text-lg text-green-100">
+                Learn about <Link to="/glossary#laft" className="text-white hover:text-green-200 underline">LAFT</Link>, <Link to="/glossary#sagrilaft" className="text-white hover:text-green-200 underline">SAGRILAFT</Link>, and <Link to="/glossary#ptee" className="text-white hover:text-green-200 underline">PTEE</Link> requirements in our glossary.
               </p>
             </div>
             

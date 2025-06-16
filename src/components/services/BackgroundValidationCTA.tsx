@@ -1,6 +1,7 @@
 
 import { Shield, Search, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const BackgroundValidationCTA = () => {
   const benefits = [
@@ -28,6 +29,10 @@ const BackgroundValidationCTA = () => {
           <p className="text-xl text-blue-100 leading-relaxed mb-8 max-w-3xl mx-auto">
             Join hundreds of organizations who trust Tusdatos for comprehensive background validation, 
             criminal screening, employment verification, and pre-hire validation services.
+          </p>
+
+          <p className="text-lg text-blue-100 mb-8">
+            Understand key terms like <Link to="/glossary#due-diligence" className="text-white hover:text-blue-200 underline">Due Diligence</Link>, <Link to="/glossary#kyc" className="text-white hover:text-blue-200 underline">KYC</Link>, and <Link to="/glossary#pep" className="text-white hover:text-blue-200 underline">PEP</Link> screening in our comprehensive glossary.
           </p>
         </div>
 

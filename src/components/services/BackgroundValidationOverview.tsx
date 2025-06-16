@@ -1,6 +1,7 @@
 
 import { Search, Shield, Database, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const BackgroundValidationOverview = () => {
   const stats = [
@@ -31,9 +32,13 @@ const BackgroundValidationOverview = () => {
                 accesses 300+ databases to ensure accurate and reliable background screening results.
               </p>
 
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 From criminal history validation to employment background checks, our comprehensive screening solutions 
                 help organizations make informed hiring decisions while maintaining compliance with data protection regulations.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Learn more about key terms: <Link to="/glossary#due-diligence" className="text-blue-600 hover:text-blue-800 underline">Due Diligence</Link>, <Link to="/glossary#enhanced-due-diligence" className="text-blue-600 hover:text-blue-800 underline">Enhanced Due Diligence</Link>, and <Link to="/glossary#api" className="text-blue-600 hover:text-blue-800 underline">API Integration</Link>.
               </p>
             </div>
             
