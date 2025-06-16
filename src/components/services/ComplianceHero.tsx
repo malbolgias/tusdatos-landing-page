@@ -1,3 +1,4 @@
+
 import { Shield, Search, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -9,7 +10,7 @@ const ComplianceHero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 bg-green-500/20 rounded-full px-4 py-2 border border-green-400/30">
                 <Shield className="w-4 h-4 text-green-300" />
                 <span className="text-green-200 text-sm font-medium">SARLAFT, KYC & AML Compliance Solutions</span>
@@ -27,10 +28,10 @@ const ComplianceHero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="green-on-dark" className="px-8 py-3 font-semibold">
+              <Button size="lg" variant="green-on-dark">
                 Start Compliance Validation
               </Button>
-              <Button size="lg" variant="green-outline-on-dark" className="px-8 py-3 font-semibold">
+              <Button size="lg" variant="green-outline-on-dark">
                 Compliance Consultation
               </Button>
             </div>
@@ -44,7 +45,7 @@ const ComplianceHero = () => {
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">SARLAFT & AML Compliance</h3>
+                    <h3 className="text-lg font-semibold text-white">SARLAFT & AML Compliance</h3>
                     <p className="text-gray-400 text-sm">Anti-money laundering validation</p>
                   </div>
                 </div>
@@ -54,7 +55,7 @@ const ComplianceHero = () => {
                     <Search className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">KYC & Due Diligence</h3>
+                    <h3 className="text-lg font-semibold text-white">KYC & Due Diligence</h3>
                     <p className="text-gray-400 text-sm">Know Your Customer verification</p>
                   </div>
                 </div>
@@ -64,7 +65,7 @@ const ComplianceHero = () => {
                     <Database className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Sanctions & PEP Screening</h3>
+                    <h3 className="text-lg font-semibold text-white">Sanctions & PEP Screening</h3>
                     <p className="text-gray-400 text-sm">Global restrictive lists validation</p>
                   </div>
                 </div>
